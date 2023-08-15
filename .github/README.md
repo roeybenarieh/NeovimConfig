@@ -1,7 +1,15 @@
-there are a few packets you need to install so everything would work:
-sudo apt install npm
+# Installation
+there are a few packets you need to install so everything would work: <br />
+sudo apt install npm <br />
 sudo apt install nerd-fonts
 
-a few packets needed to be installed threw Mason (the nvim packet manager used by nvchad)
-:MasonInstallAll  # for installing all of the packages in the my custom configurations
+a few packets needed to be installed threw Mason (the nvim packet manager used by nvchad) <br />
+:MasonInstallAll  # for installing all of the packages in the my custom configurations <br />
 :TSInstall python # for installing the python language for the tree sitter (this is something that helps neovim better understand our code)
+
+##  TODO:
+easy way to copy text to clipboard <br />
+better static type checker <br />
+autocompletion <br />
+tool for using git more easly <br />
+Install things localy <br /> 
