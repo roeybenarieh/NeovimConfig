@@ -66,7 +66,7 @@ local plugins = {
           "debugpy",
           "mypy",
           "ruff",
-          "black",
+          "prettier",
           "pyright",
         },
       },
