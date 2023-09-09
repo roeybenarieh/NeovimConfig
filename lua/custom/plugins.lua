@@ -65,7 +65,6 @@ local plugins = {
         ensure_installed = {
           "debugpy",
           "mypy",
-          "ruff",
           "prettier",
           "pyright",
         },

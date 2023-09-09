@@ -4,7 +4,6 @@ local opts = {
   -- packages null_ls is going to use (they also need to be install with mason)
   sources = {
     null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.formatting.prettier
   },
 
