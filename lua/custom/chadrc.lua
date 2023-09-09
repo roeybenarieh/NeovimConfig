@@ -1,3 +1,4 @@
+# this file is used to override the default config lua table provided by nvchad
 ---@type ChadrcConfig 
  local M = {}
  M.ui = {theme = 'catppuccin'}
