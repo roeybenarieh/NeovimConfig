@@ -59,6 +59,13 @@ local plugins = {
       end,
     },
     {
+      -- git integration for neovim. has features such as gitblame, show deleted/added/change lines 
+      "lewis6991/gitsigns.nvim",
+      config = function()
+        require 'custom.configs.gitlensconfig'
+      end,
+    },
+    {
       -- mason package manager configuration 
       "williamboman/mason.nvim",
       opts = {
