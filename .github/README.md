@@ -14,7 +14,9 @@ use these plugins:
 - gaborvecsei/memento.nvim # for keeping track of deleted buffers
 - nvim-lualine/lualine.nvim # for better neovim statusline
 - phaazon/hop.nvim # for jumping around the document faster
-- goolord/alpha-nvim # greater for neovim
+- goolord/alpha-nvim # greeter for neovim
+- rmagatti/goto-preview # for creating tiny windows for previewing file's code
+- simrat39/symbols-outline.nvim # for code symbols tree
 - maybe also AckslD/nvim-neoclip.lua # for keeping track of yanked/saved content (like windows Ctrl-c history)
 
 Install things localy
