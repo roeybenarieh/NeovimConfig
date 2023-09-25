@@ -66,12 +66,27 @@ local plugins = {
       end,
     },
     {
+     "linux-cultist/venv-selector.nvim",
+      dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
+      event = "VeryLazy",
+      config = function()
+        require("venv-selector").setup({
+          name = {"venv", ".venv", "env", ".env", "envs"},
+          auto_refresh = true,
+          dap_enabled = true,
+        })
+      end,
+      keys = {
+        {"<leader>vc", "<cmd>:VenvSelectCached<cr>", desc = "retrieve the venv from cache (the one previously used for the same project directory)"},
+        {"<leader>vs", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv :P"},
+      }
+    },
+    {
       -- mason package manager configuration 
       "williamboman/mason.nvim",
       opts = {
         ensure_installed = {
           "debugpy",
-          "mypy",
           "prettier",
           "pyright",
         },

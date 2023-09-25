@@ -11,7 +11,6 @@ a few packets needed to be installed threw Mason (the nvim packet manager used b
 easy way to copy text to clipboard <br />
 better static type checker, unused variables doesnt show warning<br />
 use these plugins:
-- linux-cultist/venv-selector.nvim # for using python venv
 - gaborvecsei/memento.nvim # for keeping track of deleted buffers
 - nvim-lualine/lualine.nvim # for better neovim statusline
 - phaazon/hop.nvim # for jumping around the document faster
