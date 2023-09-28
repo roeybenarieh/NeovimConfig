@@ -8,8 +8,17 @@ vim.wo.relativenumber = true
 -- https://jdhao.github.io/2019/04/29/nvim_spell_check/
 -- https://johncodes.com/posts/2023/02-25-nvim-spell/
 -- english spell checks 
-vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
+-- vim.opt.spelllang = 'en_us'
+-- vim.opt.spell = true
+
+-- Enable spell checking if buffer is modifiable
+vim.cmd[[
+  augroup spell_settings
+    autocmd!
+    autocmd WinEnter * if &modifiable | setlocal spell spelllang=en_us | else | setlocal nospell | endif
+  augroup END
+]]
+
 
 -- Define customized highlight gropus for Gitsigns
 -- added content
