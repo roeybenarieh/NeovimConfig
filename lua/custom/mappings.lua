@@ -30,6 +30,13 @@ M.dap_python = {
   }
 }
 
+M.venv_selector = {
+  n = {
+    ["<leader>vc"] = { "<cmd>:VenvSelectCached<cr>", "retrieve the venv from cache (the one previously used for the same project directory)"},
+    ["<leader>vs"] = { "<cmd>:VenvSelect<cr>", "Select VirtualEnv :P"},
+  }
+}
+
 M.undotree = {
   n = {
     ["<leader>u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" }, -- Undo History
