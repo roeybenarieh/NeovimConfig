@@ -1,5 +1,11 @@
 local M = {}
 
+M.general = {
+  n = {
+    ["<leader>q"] = {"<cmd>:qall<cr>", "Quit Neovim"}
+  }
+}
+
 -- custom mappings for the nvim dap pluging
 M.dap = {
   -- making the mappings exists only when we explisetly load them
