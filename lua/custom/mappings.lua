@@ -30,6 +30,12 @@ M.dap_python = {
   }
 }
 
+M.mason = {
+  n = {
+    ["<leader>mm"] = {"<cmd>:Mason<cr>", "Mason"}
+  }
+}
+
 M.venv_selector = {
   n = {
     ["<leader>vc"] = { "<cmd>:VenvSelectCached<cr>", "retrieve the venv from cache (the one previously used for the same project directory)"},
