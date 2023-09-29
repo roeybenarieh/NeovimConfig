@@ -82,6 +82,13 @@ local plugins = {
       }
     },
     {
+      "jiaoshijie/undotree",
+      dependencies  = "nvim-lua/plenary.nvim" ,
+      config = function()
+        require "custom.configs.undotree-config"
+      end,
+    },
+    {
       -- mason package manager configuration 
       "williamboman/mason.nvim",
       opts = {
@@ -89,6 +96,7 @@ local plugins = {
           "debugpy",
           "prettier",
           "pyright",
+          "undotree",
         },
       },
     },

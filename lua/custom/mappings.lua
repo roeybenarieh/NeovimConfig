@@ -30,4 +30,10 @@ M.dap_python = {
   }
 }
 
+M.undotree = {
+  n = {
+    ["<leader>u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" }, -- Undo History
+  }
+}
+
 return M
