@@ -1,6 +1,8 @@
 local options = {
   filters = {
     dotfiles = false,
+    -- custom files to now show in nvim-tree, works as vim regex
+    custom = {"^_.*_$", ".idea", ".git", "venv"},
     exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
   },
   disable_netrw = true,
@@ -19,8 +21,7 @@ local options = {
     preserve_window_proportions = true,
   },
   git = {
-    enable = false,
-    ignore = true,
+    enable = true,
   },
   filesystem_watchers = {
     enable = true,
@@ -36,7 +37,7 @@ local options = {
     highlight_opened_files = "none",
 
     indent_markers = {
-      enable = false,
+      enable = true,
     },
 
     icons = {
@@ -44,7 +45,7 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = false,
+        git = true,
       },
 
       glyphs = {
@@ -61,11 +62,11 @@ local options = {
           arrow_closed = "",
         },
         git = {
-          unstaged = "✗",
-          staged = "✓",
+          unstaged = "-",
+          staged = "+",
           unmerged = "",
           renamed = "➜",
-          untracked = "★",
+          untracked = "U",
           deleted = "",
           ignored = "◌",
         },
