@@ -96,7 +96,6 @@ local plugins = {
           "debugpy",
           "prettier",
           "pyright",
-          "undotree",
         },
       },
     },
