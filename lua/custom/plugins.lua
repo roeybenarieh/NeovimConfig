@@ -89,6 +89,18 @@ local plugins = {
       end,
     },
     {
+      "danymat/neogen",
+      dependencies = "nvim-treesitter/nvim-treesitter",
+      config = function()
+        require "custom.configs.neogenconfig"
+      end,
+      -- follow only stable versions
+      version = "*",
+      keys = {
+        {"<leader>ds", "<cmd>:Neogen<cr><cmd>:+1<cr>", desc = "Create Docstring"},
+      }
+    },
+    {
       -- mason package manager configuration 
       "williamboman/mason.nvim",
       opts = {
