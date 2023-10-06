@@ -1,7 +1,14 @@
 -- this file is used to override neovim options and commands
+local vim = vim
 
 -- relative line numbers
 vim.wo.relativenumber = true
+
+-- set the folding settings
+-- press 'z' to open whichkey, all of the folding keymaps are there
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable= false -- disable folding at startup
 
 -- spelling documentation: 
 -- https://neovim.io/doc/user/spell.html
