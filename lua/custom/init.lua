@@ -4,6 +4,11 @@ local vim = vim
 -- relative line numbers
 vim.wo.relativenumber = true
 
+-- make neovim use both the 'selection' clipboard ('unnamed') and the 'normal' clipboard the rest of the OS is using ('unnamedplus')
+-- this configuration only matters in linux OSes, in windows both clipboards are already combained as part of the OS
+-- https://stackoverflow.com/questions/30691466/what-is-difference-between-vims-clipboard-unnamed-and-unnamedplus-settings
+vim.cmd('set clipboard^=unnamed,unnamedplus')
+
 -- set the folding settings
 -- press 'z' to open whichkey, all of the folding keymaps are there
 vim.opt.foldmethod = "expr"
