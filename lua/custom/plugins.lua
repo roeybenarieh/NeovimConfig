@@ -101,6 +101,12 @@ local plugins = {
       }
     },
     {
+      "folke/neodev.nvim",
+      config = function()
+        require "custom.configs.neodevconfig"
+      end,
+    },
+    {
       -- mason package manager configuration 
       "williamboman/mason.nvim",
       opts = {
