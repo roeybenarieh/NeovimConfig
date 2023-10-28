@@ -51,4 +51,116 @@ M.undotree = {
   }
 }
 
+M.gitsigns_custom_maps = {
+
+  v = {
+    ['<leader>ga'] = {
+      function()
+        require("gitsigns").stage_hunk()
+      end,
+      "Stage hunk"
+    },
+    ['<leader>gr'] = {
+      function()
+        require("gitsigns").reset_hunk()
+      end,
+      "Reset hunk"
+    },
+  },
+
+  n = {
+
+
+    -- Staging commands
+
+    ['<leader>ga'] = {
+      function()
+        require('gitsigns').stage_hunk {vim.fn.line('.'), vim.fn.line('v')}
+      end,
+      "Stage hunk"
+    },
+
+    ['<leader>gA'] = {
+      function()
+        require('gitsigns').stage_buffer()
+      end,
+      "Stage buffer"
+    },
+
+    ['<leader>gu'] = {
+      function()
+        require('gitsigns').undo_stage_hunk()
+      end,
+      "Undo stage hunk"
+    },
+
+
+    -- Reset commands
+
+    ['<leader>gr'] = {
+      function()
+        require('gitsigns').reset_hunk {vim.fn.line('.'), vim.fn.line('v')}
+      end,
+      "Reset hunk"
+    },
+
+    ['<leader>gR'] = {
+      function()
+        require('gitsigns').reset_buffer()
+      end,
+      "Reset buffer"
+    },
+
+
+
+    -- Toggles [T]
+
+    ['<leader>gTd'] = {
+      function()
+        require('gitsigns').toggle_deleted()
+      end,
+      "Toggle Deleted"
+    },
+
+    -- Telescope gitsigns integration
+    ['<leader>gs'] = {"<cmd> Telescope git_status   <CR>", "Git status"},
+    ['<leader>gc'] = {"<cmd> Telescope git_commits  <CR>", "Git commits"},
+    ['<leader>gb'] = {"<cmd> Telescope git_branches <CR>", "Git branches"},
+    ['<leader>gf'] = {"<cmd> Telescope git_files    <CR>", "Git files"},
+    ['<leader>gS'] = {"<cmd> Telescope git_stash    <CR>", "Git stash"},
+
+
+
+    -- special things
+
+    ['<leader>gp'] = {
+      function()
+        require('gitsigns').preview_hunk()
+      end,
+      "Preview hunk"
+    },
+
+    ['<leader>gB'] = {
+      function()
+        require('gitsigns').blame_line{full=true}
+      end,
+      "Blame line"
+    },
+
+    ['<leader>gd'] = {
+      function()
+      require('gitsigns').diffthis()
+      end,
+      "Diff this"
+    },
+
+    ['<leader>gD'] = {
+      function()
+        require('gitsigns').diffthis('~')
+      end,
+      "Diff this ~"
+    },
+  },
+}
+
 return M
